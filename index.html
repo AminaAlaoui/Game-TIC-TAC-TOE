@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Voice | Pro Version</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for professional style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background decorative elements -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="title-container">
+                <h1 class="game-title">
+                    <span class="title-letter t">T</span>
+                    <span class="title-letter i">I</span>
+                    <span class="title-letter c">C</span>
+                    <span class="title-space"></span>
+                    <span class="title-letter t2">T</span>
+                    <span class="title-letter a">A</span>
+                    <span class="title-letter c2">C</span>
+                    <span class="title-space"></span>
+                    <span class="title-letter t3">T</span>
+                    <span class="title-letter o">O</span>
+                    <span class="title-letter e">E</span>
+                </h1>
+                <div class="title-sub">
+                    <span class="sub-text">VOICE CONTROL EDITION</span>
+                    <div class="sub-line"></div>
+                </div>
+            </div>
+            <p class="subtitle">Game with voice control and sound effects</p>
+        </header>
+
+        <div class="game-setup">
+            <div class="player-input">
+                <div class="input-group">
+                    <label for="playerX"><i class="fas fa-user"></i> Player X:</label>
+                    <input type="text" id="playerX" placeholder="Player X name" value="Player 1">
+                </div>
+                <div class="input-group">
+                    <label for="playerO"><i class="fas fa-user"></i> Player O:</label>
+                    <input type="text" id="playerO" placeholder="Player O name" value="Player 2">
+                </div>
+                <button id="startGame" class="btn start-btn">
+                    <i class="fas fa-play"></i> Start Game
+                </button>
+            </div>
+        </div>
+
+        <div class="game-info">
+            <div class="current-player">
+                <h2>Turn: <span id="currentPlayerName">Player 1 (X)</span></h2>
+                <div class="player-indicator" id="playerIndicator">
+                    <div class="symbol">X</div>
+                    <div class="pulse-ring"></div>
+                </div>
+            </div>
+            
+            <div class="score-board">
+                <div class="score" id="scoreX">
+                    <div class="score-header">
+                        <div class="score-icon">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <h3 id="playerXName">Player 1</h3>
+                    </div>
+                    <div class="score-value">0</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="score" id="scoreO">
+                    <div class="score-header">
+                        <div class="score-icon">
+                            <i class="far fa-circle"></i>
+                        </div>
+                        <h3 id="playerOName">Player 2</h3>
+                    </div>
+                    <div class="score-value">0</div>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div class="board-container">
+                <div class="board-grid">
+                    <div class="grid-line vertical v1"></div>
+                    <div class="grid-line vertical v2"></div>
+                    <div class="grid-line horizontal h1"></div>
+                    <div class="grid-line horizontal h2"></div>
+                    <div id="board"></div>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <button id="voiceBtn" class="btn voice-btn">
+                    <i class="fas fa-microphone"></i> Voice Control
+                </button>
+                <button id="restartBtn" class="btn restart-btn">
+                    <i class="fas fa-redo"></i> Restart Game
+                </button>
+                <button id="newGameBtn" class="btn newgame-btn">
+                    <i class="fas fa-plus-circle"></i> New Game
+                </button>
+            </div>
+            
+            <div id="status" class="status-message">
+                <div class="status-content">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="status-text">Ready to play!</span>
+                </div>
+            </div>
+
+            <div class="sound-control">
+                <label class="sound-toggle">
+                    <input type="checkbox" id="soundToggle" checked>
+                    <span class="slider"></span>
+                    <span class="sound-label">
+                        <i class="fas fa-volume-up"></i> Sound
+                    </span>
+                </label>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="voice-tips">
+                    <i class="fas fa-microphone-alt"></i>
+                    <span>Voice commands: "top left", "center", "middle right", "five"...</span>
+                </div>
+                <div class="copyright">
+                    © 2026 Tic Tac Toe Pro | Voice Control Edition
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
